@@ -15,5 +15,5 @@ function divide(numA, numB) {
 }
 
 function operate(operator, numA, numB) {
-    operator(numA, numB);
+    return operator(numA, numB);
 }
