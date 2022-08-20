@@ -13,3 +13,7 @@ function multiply(numA, numB) {
 function divide(numA, numB) {
     return numA / numB;
 }
+
+function operate(operator, numA, numB) {
+    operator(numA, numB);
+}
