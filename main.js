@@ -1,3 +1,6 @@
+const expressOut = document.querySelector("#expression-out");
+const numberOut = document.querySelector("#number-out");
+
 function add(numA, numB) {
     return numA + numB;
 }
