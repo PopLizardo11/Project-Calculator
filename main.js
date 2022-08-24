@@ -21,3 +21,7 @@ function divide(numA, numB) {
 function operate(operator, numA, numB) {
     return operator(numA, numB);
 }
+
+function popDisplay(e) {
+    numberOut.textContent += e.target.textContent;
+}
