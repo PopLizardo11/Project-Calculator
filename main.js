@@ -25,3 +25,5 @@ function operate(operator, numA, numB) {
 function popDisplay(e) {
     numberOut.textContent += e.target.textContent;
 }
+
+numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
