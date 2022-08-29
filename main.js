@@ -19,7 +19,16 @@ function divide(numA, numB) {
 }
 
 function operate(operator, numA, numB) {
-    return operator(numA, numB);
+    switch (operator) {
+        case "+":
+            return add(numA, numB)
+        case "-":
+            return subtract(numA, numB)
+        case "x":
+            return multiply(numA, numB)
+        case "/":
+            return divide(numA, numB)
+    }
 }
 
 function popDisplay(e) {
@@ -27,3 +36,7 @@ function popDisplay(e) {
 }
 
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
+
+// Recreate the operate function 
+
+// Main problem: How to display numbers as output and store the number
