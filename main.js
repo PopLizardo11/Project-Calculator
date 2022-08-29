@@ -44,6 +44,7 @@ function assignDisplay(e) {
 }
 
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
+operateBtns.forEach((btn) => btn.addEventListener("click", assignDisplay));
 
 // Recreate the operate function 
 
