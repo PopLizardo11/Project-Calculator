@@ -37,6 +37,12 @@ function popDisplay(e) {
     numberOut.textContent += e.target.textContent;
 }
 
+function assignDisplay(e) {
+    operateArg.numA = parseFloat(numberOut.textContent);
+    numberOut.textContent = "";
+    operateArg.operator = e.target.textContent;
+}
+
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
 
 // Recreate the operate function 
