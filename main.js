@@ -1,5 +1,5 @@
-const expressOut = document.querySelector("#expression-out");
-const numberOut = document.querySelector("#number-out");
+const expressOut = document.querySelector("#express-out");
+const numberOut = document.querySelector("#term-out");
 const numBtns = [...document.querySelectorAll(".num-btn")];
 const operateBtns = [...document.querySelectorAll(".operate-btn")];
 const operateArgs = {
