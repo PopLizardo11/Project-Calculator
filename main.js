@@ -40,9 +40,9 @@ function operate(operator, numA, numB) {
 
 function popDisplay(e) {
     if (!operateArgs.isEquation) {
-        numberOut.textContent += e.target.textContent;    
+        termDis.textContent += e.target.textContent;    
     } else {
-        numberOut.textContent = e.target.textContent; 
+        termDis.textContent = e.target.textContent; 
         operateArgs.isEquation = false;  
     }
 }
