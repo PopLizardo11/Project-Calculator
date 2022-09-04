@@ -6,7 +6,7 @@ const operateArgs = {
     numA: null,
     numB: null,
     operator: null,
-    isEquation: null
+    isEquation: true
 };
 
 function add(numA, numB) {
@@ -39,7 +39,12 @@ function operate(operator, numA, numB) {
 }
 
 function popDisplay(e) {
-    numberOut.textContent += e.target.textContent;
+    if (!operateArgs.isEquation) {
+        numberOut.textContent += e.target.textContent;    
+    } else {
+        numberOut.textContent = e.target.textContent; 
+        operateArgs.isEquation = false;  
+    }
 }
 
 function assignDisplay(e) {
