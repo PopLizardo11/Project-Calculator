@@ -48,10 +48,10 @@ function popDisplay(e) {
 }
 
 function assignDisplay(e) {
-    operateArg.numA = parseFloat(numberOut.textContent);
-    numberOut.textContent = "";
-    operateArg.operator = e.target.textContent;
-    expressOut.textContent = `${operateArg.numA} ${operateArg.operator} `
+    operateArgs.numA = parseFloat(numberOut.textContent);
+    termDis.textContent = "";
+    operateArgs.operator = e.target.textContent;
+    expressDis.textContent = `${operateArg.numA} ${operateArg.operator} `
 }
 
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
