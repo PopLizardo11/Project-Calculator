@@ -47,14 +47,14 @@ function popDisplay(e) {
     }
 }
 
-function assignDisplay(e) {
-    operateArgs.numA = parseFloat(numberOut.textContent);
-    termDis.textContent = "";
-    operateArgs.operator = e.target.textContent;
-    expressDis.textContent = `${operateArg.numA} ${operateArg.operator} `
+function express(e) {
+    // operateArgs.numA = parseFloat(numberOut.textContent);
+    // termDis.textContent = "";
+    // operateArgs.operator = e.target.textContent;
+    // expressDis.textContent = `${operateArg.numA} ${operateArg.operator} `
 }
 
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
-operateBtns.forEach((btn) => btn.addEventListener("click", assignDisplay));
+operateBtns.forEach((btn) => btn.addEventListener("click", express));
 
 // Excalidraw Link: https://excalidraw.com/#room=680c1b7230cbcd3daf48,UH5tj90VNBs1EtwpnRM9Aw
