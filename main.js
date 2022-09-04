@@ -1,5 +1,5 @@
-const expressOut = document.querySelector("#express-out");
-const termOut = document.querySelector("#term-out");
+const expressDis = document.querySelector("#express-dis");
+const termDis = document.querySelector("#term-dis");
 const numBtns = [...document.querySelectorAll(".num-btn")];
 const operateBtns = [...document.querySelectorAll(".operate-btn")];
 const operateArgs = {
