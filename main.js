@@ -41,6 +41,7 @@ function assignDisplay(e) {
     operateArg.numA = parseFloat(numberOut.textContent);
     numberOut.textContent = "";
     operateArg.operator = e.target.textContent;
+    expressOut.textContent = `${operateArg.numA} ${operateArg.operator} `
 }
 
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
