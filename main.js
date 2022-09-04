@@ -2,7 +2,12 @@ const expressOut = document.querySelector("#expression-out");
 const numberOut = document.querySelector("#number-out");
 const numBtns = [...document.querySelectorAll(".num-btn")];
 const operateBtns = [...document.querySelectorAll(".operate-btn")];
-const operateArg = {};
+const operateArgs = {
+    numA: null,
+    numB: null,
+    operator: null,
+    isEquation: null
+};
 
 function add(numA, numB) {
     return numA + numB;
@@ -47,6 +52,4 @@ function assignDisplay(e) {
 numBtns.forEach((btn) => btn.addEventListener("click", popDisplay));
 operateBtns.forEach((btn) => btn.addEventListener("click", assignDisplay));
 
-// Recreate the operate function 
-
-// Main problem: How to display numbers as output and store the number
+// Excalidraw Link: https://excalidraw.com/#room=680c1b7230cbcd3daf48,UH5tj90VNBs1EtwpnRM9Aw
