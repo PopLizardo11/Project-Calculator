@@ -62,7 +62,7 @@ function getOperator(e) {
     }
 }
 
-function getAnswer(e) {
+function getAnswer() {
     if (operateArgs.numB !== null) {
         const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} ${operateArgs.numB} =`
