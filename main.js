@@ -61,6 +61,17 @@ function getOperator(e) {
     }
 }
 
+function getAnswer(e) {
+    if (operateArgs.numB !== null) {
+        const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
+        expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} ${operateArgs.numB} =`
+        termDis.textContent = answer;
+        operateArgs.numA = null;
+        operateArgs.numB = null;
+        operateArgs.operator = null;
+        operateArgs.isNew = true;
+    }
+}
 // function express(e) {
 
     
