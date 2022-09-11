@@ -46,7 +46,7 @@ function getNum(e) {
         termDis.textContent = e.target.textContent; 
         operateArgs.isNew = false;  
     }
-    if (operateArgs.numA == null) {
+    if (operateArgs.operator === null) {
         operateArgs.numA = parseFloat(termDis.textContent);
     } else {
         operateArgs.numB = parseFloat(termDis.textContent);
