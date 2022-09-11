@@ -6,7 +6,7 @@ const operateArgs = {
     numA: null,
     numB: null,
     operator: null,
-    isEquation: true
+    isNew: true,
 };
 
 function add(numA, numB) {
