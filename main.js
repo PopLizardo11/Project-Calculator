@@ -46,7 +46,7 @@ function getNum(e) {
         termDis.textContent = e.target.textContent; 
         operateArgs.isNew = false;  
     }
-    if (operateArgs.numA === null) {
+    if (operateArgs.numA == null) {
         operateArgs.numA = parseFloat(termDis.textContent);
     } else {
         operateArgs.numB = parseFloat(termDis.textContent);
@@ -98,5 +98,6 @@ function getAnswer(e) {
 
 numBtns.forEach((btn) => btn.addEventListener("click", getNum));
 operateBtns.forEach((btn) => btn.addEventListener("click", getOperator));
+equalsBtn.addEventListener("click", getAnswer);
 
 // Excalidraw Link: https://excalidraw.com/#room=680c1b7230cbcd3daf48,UH5tj90VNBs1EtwpnRM9Aw
