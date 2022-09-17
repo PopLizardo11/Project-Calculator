@@ -91,7 +91,6 @@ function deleteNum() {
 
 function assignNum() {
     const num = isNaN(parseFloat(termDis.textContent)) ? 0 : parseFloat(termDis.textContent);
-    console.log(num);
     if (operateArgs.operator === null) {
         operateArgs.numA = num;
     } else {
