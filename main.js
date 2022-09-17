@@ -3,6 +3,7 @@ const termDis = document.querySelector("#term-dis");
 const numBtns = [...document.querySelectorAll(".num-btn")];
 const operateBtns = [...document.querySelectorAll(".operate-btn")];
 const equalsBtn = document.querySelector("#equals-btn");
+const deleteBtn = document.querySelector("#delete-btn");
 const operateArgs = {
     numA: null,
     numB: null,
