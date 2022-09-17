@@ -90,6 +90,15 @@ function clearArgs() {
     operateArgs.isNew = true;
 }
 
+function deleteNum() {
+    termDis.textContent = termDis.textContent.slice(0, termDis.textContent.length - 1);
+    if (operateArgs.operator === null) {
+        operateArgs.numA = parseFloat(termDis.textContent);
+    } else {
+        operateArgs.numB = parseFloat(termDis.textContent);
+    }
+}
+
 numBtns.forEach((btn) => btn.addEventListener("click", getNum));
 operateBtns.forEach((btn) => btn.addEventListener("click", getOperator));
 operateBtns.forEach((btn) => btn.addEventListener("click", expressAnswer));
