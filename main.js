@@ -104,5 +104,6 @@ numBtns.forEach((btn) => btn.addEventListener("click", getNum));
 operateBtns.forEach((btn) => btn.addEventListener("click", getOperator));
 operateBtns.forEach((btn) => btn.addEventListener("click", expressAnswer));
 equalsBtn.addEventListener("click", getAnswer);
+deleteBtn.addEventListener("click", deleteNum);
 
 // Excalidraw Link: https://excalidraw.com/#room=680c1b7230cbcd3daf48,UH5tj90VNBs1EtwpnRM9Aw
