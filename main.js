@@ -47,11 +47,6 @@ function getNum(e) {
         termDis.textContent = e.target.textContent; 
         operateArgs.isNew = false;  
     }
-    if (operateArgs.operator === null) {
-        operateArgs.numA = parseFloat(termDis.textContent);
-    } else {
-        operateArgs.numB = parseFloat(termDis.textContent);
-    }
 }
 
 function getOperator(e) {
@@ -97,7 +92,7 @@ function deleteNum() {
 }
 
 function assignNum() {
-    const num = (typeof parseFloat(termDis.textContent) !== Number) ? 0 : parseFloat(termDis.textContent);
+    const num = isNaN(parseFloat(termDis.textContent)) ? 0 : parseFloat(termDis.textContent);
     console.log(num);
     if (operateArgs.operator === null) {
         operateArgs.numA = num;
