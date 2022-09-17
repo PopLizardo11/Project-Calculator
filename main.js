@@ -67,11 +67,15 @@ function getAnswer() {
         const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} ${operateArgs.numB} =`
         termDis.textContent = answer;
-        operateArgs.numA = null;
-        operateArgs.numB = null;
-        operateArgs.operator = null;
-        operateArgs.isNew = true;
+        clearArgs();
     }
+}
+
+function clearArgs() {
+    operateArgs.numA = null;
+    operateArgs.numB = null;
+    operateArgs.operator = null;
+    operateArgs.isNew = true;
 }
 
 numBtns.forEach((btn) => btn.addEventListener("click", getNum));
