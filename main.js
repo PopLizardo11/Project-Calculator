@@ -73,28 +73,6 @@ function getAnswer() {
         operateArgs.isNew = true;
     }
 }
-// function express(e) {
-
-    
-//     // if (expressDis.textContent !== "") {
-//     //     operateArgs.numB = parseFloat(termDis.textContent);
-//     //     const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
-//     //     operateArgs.numA = answer;
-//     //     operateArgs.operator = e.target.textContent;
-//     //     expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} `;
-//     //     termDis.textContent = operateArgs.numA;
-//     //     operateArgs.isEquation = true; 
-//     // } else {
-//     //     operateArgs.numA = parseFloat(termDis.textContent);
-//     //     operateArgs.operator = e.target.textContent;
-//     //     termDis.textContent = "";
-//     //     expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} `;
-//     // }
-//         // operateArgs.numA = parseFloat(numberOut.textContent);
-//         // termDis.textContent = "";
-//         // operateArgs.operator = e.target.textContent;
-//         // expressDis.textContent = `${operateArg.numA} ${operateArg.operator} `
-// }
 
 numBtns.forEach((btn) => btn.addEventListener("click", getNum));
 operateBtns.forEach((btn) => btn.addEventListener("click", getOperator));
