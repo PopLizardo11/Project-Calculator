@@ -93,7 +93,10 @@ function clearArgs() {
 
 function deleteNum() {
     termDis.textContent = termDis.textContent.slice(0, termDis.textContent.length - 1);
+    assignNum()
+}
 
+function assignNum() {
     const num = (typeof parseFloat(termDis.textContent) !== Number) ? 0 : parseFloat(termDis.textContent);
     console.log(num);
     if (operateArgs.operator === null) {
