@@ -65,7 +65,10 @@ function getAnswer() {
         const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} ${operateArgs.numB} =`
         termDis.textContent = answer;
-        clearArgs();
+        operateArgs.numA = answer;
+        operateArgs.numB = null;
+        operateArgs.operator = null;
+        operateArgs.isNew = true;
     }
 }
 
@@ -79,13 +82,6 @@ function expressAnswer(e) {
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator}`;
         termDis.textContent = answer;
     }
-}
-
-function clearArgs() {
-    operateArgs.numA = null;
-    operateArgs.numB = null;
-    operateArgs.operator = null;
-    operateArgs.isNew = true;
 }
 
 function deleteNum() {
