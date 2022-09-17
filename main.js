@@ -47,6 +47,8 @@ function getNum(e) {
         termDis.textContent = e.target.textContent; 
         operateArgs.isNew = false;  
     }
+    
+    assignNum();
 }
 
 function getOperator(e) {
