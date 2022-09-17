@@ -55,7 +55,7 @@ function getNum(e) {
 
 function getOperator(e) {
     if (operateArgs.numA !== null) {
-        operateArgs.numA = parseFloat(termDis.textContent);
+        // operateArgs.numA = parseFloat(termDis.textContent);
         operateArgs.operator = e.target.textContent;
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator}`
         operateArgs.isNew = true;
@@ -71,6 +71,18 @@ function getAnswer() {
     }
 }
 
+function expressAnswer(e) {
+    if (operateArgs.numB !== null) {
+        const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
+        operateArgs.numA = answer;
+        operateArgs.operator = e.target.textContent;
+        operateArgs.numB = null;
+        operateArgs.isNew = true;
+        expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator}`;
+        termDis.textContent = answer;
+    }
+}
+
 function clearArgs() {
     operateArgs.numA = null;
     operateArgs.numB = null;
@@ -80,6 +92,7 @@ function clearArgs() {
 
 numBtns.forEach((btn) => btn.addEventListener("click", getNum));
 operateBtns.forEach((btn) => btn.addEventListener("click", getOperator));
+operateBtns.forEach((btn) => btn.addEventListener("click", expressAnswer));
 equalsBtn.addEventListener("click", getAnswer);
 
 // Excalidraw Link: https://excalidraw.com/#room=680c1b7230cbcd3daf48,UH5tj90VNBs1EtwpnRM9Aw
