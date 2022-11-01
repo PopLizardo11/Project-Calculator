@@ -86,6 +86,15 @@ function deleteNum() {
     assignNum()
 }
 
+function clearAll() {
+    termDis.textContent = 0;
+    expressDis.textContent = "";
+    for (let args in operateArgs) {
+        args = (args === operateArgs.isNew) ? true : null; 
+    }
+    console.log(operateArgs)
+}
+
 function assignNum() {
     const num = isNaN(parseFloat(termDis.textContent)) ? 0 : parseFloat(termDis.textContent);
     if (operateArgs.operator === null) {
