@@ -66,8 +66,6 @@ function getAnswer() {
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} ${operateArgs.numB} =`
         termDis.textContent = answer;
         operateArgs.numA = answer;
-        operateArgs.numB = null;
-        operateArgs.operator = null;
         operateArgs.isNew = true;
     }
 }
