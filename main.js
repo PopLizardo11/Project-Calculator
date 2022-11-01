@@ -93,7 +93,6 @@ function clearAll() {
     Object.keys(operateArgs).forEach(key => {
         operateArgs[key] = (operateArgs[key] === operateArgs.isNew) ? true : null;
     })
-    console.log(operateArgs);
 }
 
 function assignNum() {
