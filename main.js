@@ -90,10 +90,10 @@ function deleteNum() {
 function clearAll() {
     termDis.textContent = 0;
     expressDis.textContent = "";
-    for (let args in operateArgs) {
-        args = (args === operateArgs.isNew) ? true : null; 
-    }
-    console.log(operateArgs)
+    Object.keys(operateArgs).forEach(key => {
+        operateArgs[key] = (operateArgs[key] === operateArgs.isNew) ? true : null;
+    })
+    console.log(operateArgs);
 }
 
 function assignNum() {
