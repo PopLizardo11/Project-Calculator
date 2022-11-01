@@ -53,7 +53,7 @@ function getNum(e) {
 }
 
 function getOperator(e) {
-    if (operateArgs.numA !== null) {
+    if (operateArgs.numA !== null && operateArgs.numB === null) {
         operateArgs.operator = e.target.textContent;
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator}`
         operateArgs.isNew = true;
