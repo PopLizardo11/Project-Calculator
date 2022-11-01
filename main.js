@@ -104,6 +104,13 @@ function assignNum() {
     }
 }
 
+function checkZerosDivision() {
+    if (operateArgs.operator === "/" && operateArgs.numA === 0 && operateArgs.numB === 0) {
+        alert("SYNTAX ERROR"); 
+        return true
+    }
+}
+
 numBtns.forEach((btn) => btn.addEventListener("click", getNum));
 operateBtns.forEach((btn) => btn.addEventListener("click", getOperator));
 operateBtns.forEach((btn) => btn.addEventListener("click", expressAnswer));
