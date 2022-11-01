@@ -62,6 +62,9 @@ function getOperator(e) {
 
 function getAnswer() {
     if (operateArgs.numB !== null) {
+        if (checkZerosDivision()) {
+            return
+        }
         const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator} ${operateArgs.numB} =`
         termDis.textContent = answer;
@@ -72,6 +75,9 @@ function getAnswer() {
 
 function expressAnswer(e) {
     if (operateArgs.numB !== null) {
+        if (checkZerosDivision()) {
+            return
+        }
         const answer = operate(operateArgs.operator, operateArgs.numA, operateArgs.numB);
         operateArgs.numA = answer;
         operateArgs.operator = e.target.textContent;
