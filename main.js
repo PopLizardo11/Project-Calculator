@@ -53,7 +53,6 @@ function getNum(e) {
 
 function getOperator(e) {
     if (operateArgs.numA !== null) {
-        // operateArgs.numA = parseFloat(termDis.textContent);
         operateArgs.operator = e.target.textContent;
         expressDis.textContent = `${operateArgs.numA} ${operateArgs.operator}`
         operateArgs.isNew = true;
